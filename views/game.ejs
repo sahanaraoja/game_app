@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Guess the Number</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+  </head>
+  <body>
+    <h1>Guess the Number</h1>
+    <h2>Guess the number between 1 and 100</h2>
+    <h3>Attempts: <%= game.attempts %></h3>
+    <form id="guessForm">
+      <input type="number" id="guessInput" min="1" max="100" required>
+      <button type="submit">Guess</button>
+    </form>
+    <div id="result"></div>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>

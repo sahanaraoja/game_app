@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Guess the Number</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+  </head>
+  <body>
+    <h1>Guess the Number</h1>
+    <h2>Leaderboard</h2>
+    <table>
+      <tr>
+        <th>Player</th>
+        <th>Attempts</th>
+      </tr>
+      <% leaderboard.forEach(function(game) { %>
+        <tr>
+          <td><%= game.playerName %></td>
+          <td><%= game.attempts %></td>
+        </tr>
+      <% }); %>
+    </table>
+    <h2>Start a New Game</h2>
+    <form action="/game" method="post">
+      <input type="text" name="playerName" placeholder="Enter your name" required>
+      <button type="submit">Start Game</button>
+    </form>
+  </body>
+</html>
